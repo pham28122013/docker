@@ -10,12 +10,12 @@
          stopOnFailure="false">
     <testsuites>
         <testsuite name="Unit">
-            <directory suffix="Test.php">./tests/Unit</directory>
+            <directory suffix=".php">./resources/views</directory>
         </testsuite>
 
-        <testsuite name="Feature">
+        <!-- <testsuite name="Feature">
             <directory suffix="Test.php">./tests/Feature</directory>
-        </testsuite>
+        </testsuite> -->
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
