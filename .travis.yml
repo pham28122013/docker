@@ -17,4 +17,5 @@ before_script:
   # - php artisan key:generate
   # - php artisan migrate:refresh --seed
 
-script: ./vendor/bin/phpunit
+script: 
+  # ./vendor/bin/phpunit
