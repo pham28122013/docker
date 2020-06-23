@@ -14,3 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::namespace('Frontend')->group(function () {
+    Route::get('/detail-sanpham/{id}','ProductController@product');
+    Route::get('/phukien/{id}','ProductController@accessory');
+    Route::get('/sanpham-highlight','ProductController@highlight');
+    Route::get('/sanpham-sale','ProductController@sale');
+    Route::get('/giohang','ProductController@cart');
+    Route::get('/phukien','ProductController@accessoriesList');
+    Route::get('/thanhtoan','ProductController@checkout');
+});
+
+Route::namespace('Auth')->group(function () {
+    Route::get('/login','LoginController@getLogin')->name('users.getlogin');
+    Route::post('/login','LoginController@postLogin')->name('users.postlogin');
+    Route::get('/logout','LoginController@logout')->name('logout');
+});  
