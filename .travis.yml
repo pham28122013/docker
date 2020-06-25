@@ -12,4 +12,4 @@ before_script:
   - cp .env.travis .env
   - composer self-update
 script:
-  - $TRAVIS_BUILD_DIR/vendor/bin/phpunit
+  - App/vendor/bin/phpunit
