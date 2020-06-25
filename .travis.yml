@@ -3,5 +3,17 @@ language: php
 php:
   - 7.1.3
 
-
+services:
+  - mysql
+cache:
+  directories:
+    - vendor
+before_script:
+  - cp .env.travis .env
+  - composer self-update
+  - composer install --prefer-source --no-interaction --dev
+  - php artisan key:generate
+  - php artisan migrate
+script:
+  - vendor/bin/phpunit
 
