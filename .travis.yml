@@ -6,4 +6,4 @@ before_script:
   - cp .env.travis .env
   - composer self-update
 script:
-  - app/vendor/autoload.php
+  - phpUnitTutorial/tests
