@@ -5,6 +5,6 @@ php:
 before_script:
   - cp .env.travis .env
   - curl -s http://getcomposer.org/installer | php
-  - php composer.phar install
+  - composer.phar install
 
 script: vendor/bin/phpunit --debug
